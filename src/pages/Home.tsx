@@ -10,19 +10,22 @@ const Home = () => {
 
   return (
     <>
-      <Banner name="LearnHub" detail="Hub for Educational Videos" />
+      <Banner name="LearnHub" detail="An investment in knowledge pays the best interest" />
+      <div className="bg-[#EAEAEA] pt-[60px]">
+        {isLoggedIn && (
+          <div className="flex flex-row-reverse mr-[110px]">
+            <Link
+              to="/create"
+              className={'flex justify-center rounded-lg bg-[#000] py-3 px-10 text-white font-bold w-[250px] mb-[25px]'}
+            >
+              Create new content
+            </Link>
+          </div>
+        )}
 
-      {isLoggedIn && (
-        <Link
-          to="/create"
-          className={'rounded-lg bg-[#ff9100] py-3 px-10 text-white font-bold flex w-[250px] mt-[30px]'}
-        >
-          Create new content
-        </Link>
-      )}
-
-      <div className="flex flex-wrap mx-auto w-[1260px] gap-[30px] mt-[30px]">
-        {contentList && contentList.map((content) => <ContentCard key={content.id} content={content} />)}
+        <div className="flex flex-wrap mx-auto w-[1260px] gap-[30px]">
+          {contentList && contentList.map((content) => <ContentCard key={content.id} content={content} />)}
+        </div>
       </div>
     </>
   )

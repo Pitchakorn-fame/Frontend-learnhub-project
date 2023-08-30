@@ -28,10 +28,10 @@ const Register = () => {
   return (
     <>
       <Banner name="Register" />
-      <div className="flex justify-center pt-16">
+      <div className="flex justify-center pt-16 bg-[#EAEAEA]">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col rounded-2xl border-2 border-solid w-1/4 text-[20px] font-bold gap-6 p-4 bg-[#D9D9D9]"
+          className="flex flex-col rounded-2xl border-2 border-solid w-1/4 text-[20px] font-bold gap-6 p-4 bg-[#fff]"
         >
           <div className="flex flex-col gap-3">
             <label>Username :</label>
@@ -39,7 +39,7 @@ const Register = () => {
               id="username"
               type="text"
               onChange={(e) => setUsernameInput(e.target.value)}
-              className="rounded-lg w-11/12 border-gray-500 p-1"
+              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
               required
             />
           </div>
@@ -50,7 +50,7 @@ const Register = () => {
               id="yourName"
               type="text"
               onChange={(e) => setNameInput(e.target.value)}
-              className="rounded-lg w-11/12 border-gray-500 p-1"
+              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
               required
             />
           </div>
@@ -61,12 +61,12 @@ const Register = () => {
               id="password"
               type="password"
               onChange={(e) => setPasswordInput(e.target.value)}
-              className="rounded-lg w-11/12 border-gray-500 p-1"
+              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
               required
             />
           </div>
 
-          <button className="rounded-lg bg-[#ff9100] py-3 px-10 text-white">Register</button>
+          <button className="rounded-lg bg-[#000] py-3 px-10 text-white">Register</button>
         </form>
       </div>
     </>

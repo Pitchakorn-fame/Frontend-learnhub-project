@@ -52,32 +52,36 @@ const Edit = () => {
   if (error) return <h1>error</h1>
 
   return (
-    <div>
+    <>
       <Banner name="Edit Content" />
-      <form
-        onSubmit={handleEdit}
-        className="flex flex-col rounded-2xl border-2 border-solid w-1/4 text-[20px] font-bold gap-6 p-4 bg-[#D9D9D9]"
-      >
-        <label>Comment</label>
-        <input
-          type="text"
-          value={newComment}
-          onChange={(e) => setNewComment(e.target.value)}
-          className="rounded-lg  w-11/12 border-gray-500 p-1"
-          required
-        />
-        <label>Rating</label>
-
-        <ReactStars
-          value={newRating}
-          onChange={(rating) => setNewRating(rating)}
-          count={5}
-          size={24}
-          color2={'#ffd700'}
-        />
-        <button>Submit</button>
-      </form>
-    </div>
+      <div className="flex justify-center pt-16 bg-[#EAEAEA]">
+        <form
+          onSubmit={handleEdit}
+          className="flex flex-col rounded-2xl border-2 border-solid w-1/4 text-[20px] font-bold gap-6 p-4 bg-[#FFF]"
+        >
+          <label>Comment</label>
+          <input
+            type="text"
+            value={newComment}
+            onChange={(e) => setNewComment(e.target.value)}
+            className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+            required
+          />
+          <div className="flex items-center gap-5">
+            <label>Rating</label>
+            <ReactStars
+              value={newRating}
+              onChange={(rating) => setNewRating(rating)}
+              count={5}
+              size={24}
+              color2={'#ffd700'}
+              half={false}
+            />
+          </div>
+          <button className="rounded-lg bg-[#000] py-3 px-10 text-white">Submit</button>
+        </form>
+      </div>
+    </>
   )
 }
 

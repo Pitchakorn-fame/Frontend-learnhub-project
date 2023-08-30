@@ -1,10 +1,16 @@
-import React from 'react'
 import logo from '../assets/atom.png'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../providers/AuthProvider'
+import useContentList from '../hooks/useContentList'
+import Loading from './Loading'
 
 const Navbar = () => {
   const { isLoggedIn, logout, username } = useAuth()
+  console.log(username)
+  const { contentList, isLoading, error } = useContentList()
+
+  if (isLoading || !contentList) return <Loading />
+  if (error) return <p>{error}</p>
   return (
     <div className="flex justify-between px-4 h-16 items-center">
       <Link to={'/'} className="flex items-center">
@@ -14,17 +20,17 @@ const Navbar = () => {
 
       {isLoggedIn ? (
         <div className="flex gap-5 font-medium text-white">
-          <p>Welcome </p> {username}
-          <Link to="/" onClick={logout} className="rounded-2xl bg-[#4CAF50] py-2 px-5 ">
+          <p>Welcome {username}</p>
+          <Link to="/" onClick={logout} className="rounded-2xl bg-[#000000] py-2 px-5 ">
             Logout
           </Link>
         </div>
       ) : (
         <div className="flex gap-5 font-medium text-white">
-          <Link to="/login" className="rounded-2xl bg-[#4CAF50] py-2 px-7 ">
+          <Link to="/login" className="rounded-2xl bg-[#000000] py-2 px-7 ">
             Login
           </Link>
-          <Link to="/register" className="rounded-2xl bg-[#4CAF50] py-2 px-5">
+          <Link to="/register" className="rounded-2xl bg-[#000000] py-2 px-5">
             Register
           </Link>
         </div>

@@ -43,46 +43,49 @@ const Content = () => {
   }
 
   if (isLoading || !content) return <Loading />
-  if (error) return <h1>error</h1>
+  if (error) return <p>{error}</p>
 
   return (
     <>
       <Banner name={content.videoTitle} />
-
-      <div className="flex flex-col mx-auto border-2 border-solid rounded-2xl w-[700px] my-14 p-5 font-bold bg-[#EBECF0]">
-        <div className="flex flex-col items-center my-4">
-          <p className="text-[30px]">{content.videoTitle}</p>
-          <p>{content.creatorName}</p>
-        </div>
-        <ReactPlayer url={content?.videoUrl} />
-
-        <div className="flex gap-3 pt-5">
-          <img src={logoComment} alt="comment logo" className="w-8 h-8" />
-          <p className="text-[20px]">{content.comment}</p>
-        </div>
-
-        <div className="flex flex-col items-end">
-          <ReactStars edit={false} count={5} value={content.rating} size={24} color2={'#ffd700'} />
-          <p>Posted by {content.postedBy.username}</p>
-          <p>{content.createdAt}</p>
-          {/* <p>{formatDate(content.createdAt)}</p> */}
-        </div>
-
-        {username === content.postedBy.username && (
-          <div className="flex flex-col items-end gap-2 pt-5">
-            <Link to={`/edit/${id}`}>
-              <div className="flex items-center gap-2">
-                <img src={logoEdit} alt="Edit logo" className="w-auto h-5 " />
-                <p>Edit</p>
-              </div>
-            </Link>
-
-            <button onClick={handleDelete} className="flex items-center gap-2">
-              <img src={logoTrash} alt="Trash logo" className="w-auto h-5 " />
-              <p>DELETE</p>
-            </button>
+      <div className="flex justify-center bg-[#EAEAEA]">
+        <div className="flex flex-col  border-2 border-solid rounded-2xl w-[700px] my-14 px-10 py-5 font-bold bg-[#FFF]">
+          <div className="flex flex-col items-center my-4">
+            <p className="text-[30px]">{content.videoTitle}</p>
+            <p>{content.creatorName}</p>
           </div>
-        )}
+          <ReactPlayer url={content?.videoUrl} />
+
+          <div className="flex flex-col">
+            <div className="flex gap-3 pt-5">
+              <img src={logoComment} alt="comment logo" className="w-8 h-8" />
+              <p className="text-[20px]">{content.comment}</p>
+            </div>
+
+            <div className="flex flex-col items-end">
+              <ReactStars edit={false} count={5} value={content.rating} size={24} color2={'#ffd700'} />
+              <p>Posted by {content.postedBy.username}</p>
+              <p>{content.createdAt}</p>
+              {/* <p>{formatDate(content.createdAt)}</p> */}
+            </div>
+
+            {username === content.postedBy.username && (
+              <div className="flex flex-col items-end gap-2 pt-5">
+                <Link to={`/edit/${id}`}>
+                  <div className="flex items-center gap-2">
+                    <img src={logoEdit} alt="Edit logo" className="w-auto h-5 " />
+                    <p>Edit</p>
+                  </div>
+                </Link>
+
+                <button onClick={handleDelete} className="flex items-center gap-2">
+                  <img src={logoTrash} alt="Trash logo" className="w-auto h-5 " />
+                  <p>DELETE</p>
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </>
   )

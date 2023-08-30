@@ -46,19 +46,34 @@ const Create = () => {
   return (
     <>
       <Banner name="Create new content" />
-      <form
-        onSubmit={handleCreate}
-        className="flex flex-col rounded-2xl border-2 border-solid w-1/4 text-[20px] font-bold gap-6 p-4 bg-[#D9D9D9] mx-auto mt-40"
-      >
-        <label>Video URL</label>
-        <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} required />
+      <div className="flex justify-center pt-16 bg-[#EAEAEA]">
+        <form
+          onSubmit={handleCreate}
+          className="flex flex-col rounded-2xl border-2 border-solid w-1/4 text-[20px] font-bold gap-6 p-4 bg-[#FFF]"
+        >
+          <label>Video URL</label>
+          <input
+            type="text"
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+            required
+          />
 
-        <label>Comment</label>
-        <input type="text" value={comment} onChange={(e) => setComment(e.target.value)} required />
-
-        <ReactStars count={5} onChange={(rating) => setRating(rating)} size={24} color2={'#ffd700'} />
-        <button>Submit</button>
-      </form>
+          <label>Comment</label>
+          <input
+            type="text"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            required
+            className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+          />
+          <div className="flex justify-center">
+            <ReactStars count={5} onChange={(rating) => setRating(rating)} size={24} color2={'#ffd700'} half={false} />
+          </div>
+          <button className="rounded-lg bg-[#000] py-3 px-10 text-white">Submit</button>
+        </form>
+      </div>
     </>
   )
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import { ThreeCircles } from 'react-loader-spinner'
 
 const Loading = () => {
@@ -7,7 +6,7 @@ const Loading = () => {
       <ThreeCircles
         height="100"
         width="100"
-        color="#4fa94d"
+        color="#D20303"
         wrapperStyle={{}}
         wrapperClass=""
         visible={true}

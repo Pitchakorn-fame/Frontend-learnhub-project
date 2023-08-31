@@ -54,9 +54,14 @@ const Login = () => {
           </div>
 
           <div className="flex place-content-around">
-            <button className="rounded-lg bg-[#000] py-3 px-10 text-white">LOGIN</button>
+            <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black">
+              LOGIN
+            </button>
 
-            <Link to="/register" className="rounded-lg bg-[#000] py-3 px-8 text-white">
+            <Link
+              to="/register"
+              className="rounded-lg bg-[#000] py-3 px-8 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black"
+            >
               REGISTER
             </Link>
           </div>

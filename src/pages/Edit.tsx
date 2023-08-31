@@ -78,7 +78,9 @@ const Edit = () => {
               half={false}
             />
           </div>
-          <button className="rounded-lg bg-[#000] py-3 px-10 text-white">Submit</button>
+          <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black">
+            Submit
+          </button>
         </form>
       </div>
     </>

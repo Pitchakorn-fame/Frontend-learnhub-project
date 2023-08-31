@@ -24,7 +24,11 @@ const Navbar = () => {
             <p>Welcome</p>
             <p className="font-bold text-[#A50113]"> {username}</p>
           </div>
-          <Link to="/" onClick={logout} className="flex items-center rounded-2xl bg-[#000000] py-2 px-5 text-white">
+          <Link
+            to="/"
+            onClick={logout}
+            className="flex items-center rounded-2xl bg-[#000000] py-2 px-5 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black"
+          >
             Logout
           </Link>
         </div>

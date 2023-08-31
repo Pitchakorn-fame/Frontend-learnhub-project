@@ -16,7 +16,9 @@ const Home = () => {
           <div className="flex flex-row-reverse mr-[110px]">
             <Link
               to="/create"
-              className={'flex justify-center rounded-lg bg-[#000] py-3 px-10 text-white font-bold w-[250px] mb-[25px]'}
+              className={
+                'flex justify-center rounded-lg bg-[#000] py-3 px-10 text-white font-bold w-[250px] mb-[25px] hover:bg-white hover:text-black hover:border-[3px] hover:border-black'
+              }
             >
               Create new content
             </Link>

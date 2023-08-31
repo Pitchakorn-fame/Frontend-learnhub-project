@@ -34,7 +34,7 @@ const Register = () => {
           className="flex flex-col rounded-2xl border-2 border-solid w-1/4 text-[20px] font-bold gap-6 p-4 bg-[#fff]"
         >
           <div className="flex flex-col gap-3">
-            <label>Username :</label>
+            <label>USERNAME :</label>
             <input
               id="username"
               type="text"
@@ -45,7 +45,7 @@ const Register = () => {
           </div>
 
           <div className="flex flex-col gap-3">
-            <label>Your name :</label>
+            <label>YOUR NAME :</label>
             <input
               id="yourName"
               type="text"
@@ -56,7 +56,7 @@ const Register = () => {
           </div>
 
           <div className="flex flex-col gap-3">
-            <label>Password :</label>
+            <label>PASSWORD :</label>
             <input
               id="password"
               type="password"
@@ -66,7 +66,7 @@ const Register = () => {
             />
           </div>
 
-          <button className="rounded-lg bg-[#000] py-3 px-10 text-white">Register</button>
+          <button className="rounded-lg bg-[#000] py-3 px-10 text-white">REGISTER</button>
         </form>
       </div>
     </>

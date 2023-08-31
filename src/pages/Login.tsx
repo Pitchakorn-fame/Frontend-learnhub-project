@@ -54,10 +54,10 @@ const Login = () => {
           </div>
 
           <div className="flex place-content-around">
-            <button className="rounded-lg bg-[#000] py-3 px-10 text-white">Login</button>
+            <button className="rounded-lg bg-[#000] py-3 px-10 text-white">LOGIN</button>
 
             <Link to="/register" className="rounded-lg bg-[#000] py-3 px-8 text-white">
-              Register
+              REGISTER
             </Link>
           </div>
         </form>

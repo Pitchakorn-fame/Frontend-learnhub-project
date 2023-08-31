@@ -30,10 +30,16 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="flex gap-5 font-medium text-white">
-          <Link to="/login" className="rounded-2xl bg-[#000000] py-2 px-7 ">
+          <Link
+            to="/login"
+            className="rounded-2xl bg-[#000000] py-2 px-7 hover:bg-white hover:text-black hover:border-[3px] hover:border-black"
+          >
             Login
           </Link>
-          <Link to="/register" className="rounded-2xl bg-[#000000] py-2 px-5">
+          <Link
+            to="/register"
+            className="rounded-2xl bg-[#000000] py-2 px-5 hover:bg-white hover:text-black hover:border-[3px] hover:border-black"
+          >
             Register
           </Link>
         </div>

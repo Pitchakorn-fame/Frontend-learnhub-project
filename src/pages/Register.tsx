@@ -28,7 +28,7 @@ const Register = () => {
   return (
     <>
       <Banner name="Register" />
-      <div className="flex justify-center pt-16 bg-[#EAEAEA]">
+      <div className="flex justify-center pt-16">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col rounded-2xl border-2 border-solid w-1/4 text-[20px] font-bold gap-6 p-4 bg-[#fff]"

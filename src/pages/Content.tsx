@@ -48,15 +48,15 @@ const Content = () => {
   return (
     <>
       <Banner name={content.videoTitle} />
-      <div className="flex justify-center bg-[#EAEAEA]">
-        <div className="flex flex-col  border-2 border-solid rounded-2xl w-[700px] my-14 px-10 py-5 font-bold bg-[#FFF]">
+      <div className="flex justify-center bg-[#000]">
+        <div className="flex flex-col  border-2 border-solid rounded-2xl w-[700px] my-14 px-10 py-4 font-bold bg-[#FFF]">
           <div className="flex flex-col items-center my-4">
             <p className="text-[30px]">{content.videoTitle}</p>
             <p>{content.creatorName}</p>
           </div>
           <ReactPlayer url={content?.videoUrl} />
 
-          <div className="flex flex-col">
+          <div className="flex flex-col rounded-2xl border-2 border-solid border-[#dcdcdc] m-7 px-7 pb-3 bg-[#EAEAEA]">
             <div className="flex gap-3 pt-5">
               <img src={logoComment} alt="comment logo" className="w-8 h-8" />
               <p className="text-[20px]">{content.comment}</p>

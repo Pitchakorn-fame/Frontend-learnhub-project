@@ -18,10 +18,13 @@ interface ContentCardProps {
 const ContentCard = ({ content }: ContentCardProps) => {
   // const ContentCard = ({ content }: ContentDto) => {}
   return (
-    <Link to={`/content/${content.id}`} className="w-[400px] h-full rounded-lg overflow-hidden bg-[#FFF]">
+    <Link
+      to={`/content/${content.id}`}
+      className="flex flex-col justify-between w-[400px] h-auto rounded-lg overflow-hidden bg-[#FFF]"
+    >
       <img src={content.thumbnailUrl} alt="video thumbnail" className="object-cover w-full aspect-video" />
 
-      <div className="flex flex-col justify-between  ">
+      <div className="flex flex-col justify-between">
         <div className="m-2">
           <p className="break-words font-bold">{content.videoTitle}</p>
           <p>{content.creatorName}</p>

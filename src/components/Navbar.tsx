@@ -12,16 +12,19 @@ const Navbar = () => {
   if (isLoading || !contentList) return <Loading />
   if (error) return <p>{error}</p>
   return (
-    <div className="flex justify-between px-4 h-16 items-center">
+    <div className="flex justify-between px-10 h-16 items-center">
       <Link to={'/'} className="flex items-center">
         <img src={logo} alt="Atom logo" className="w-auto h-16" />
         <p className="font-medium text-3xl">LearnHub</p>
       </Link>
 
       {isLoggedIn ? (
-        <div className="flex gap-5 font-medium text-white">
-          <p>Welcome {username}</p>
-          <Link to="/" onClick={logout} className="rounded-2xl bg-[#000000] py-2 px-5 ">
+        <div className="flex items-center gap-8 font-medium">
+          <div className="flex text-black gap-2">
+            <p>Welcome</p>
+            <p className="font-bold text-[#A50113]"> {username}</p>
+          </div>
+          <Link to="/" onClick={logout} className="flex items-center rounded-2xl bg-[#000000] py-2 px-5 text-white">
             Logout
           </Link>
         </div>

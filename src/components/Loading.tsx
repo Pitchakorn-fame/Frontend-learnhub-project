@@ -2,7 +2,7 @@ import { ThreeCircles } from 'react-loader-spinner'
 
 const Loading = () => {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
+    <div className="w-full h-screen flex justify-center mt-12">
       <ThreeCircles
         height="100"
         width="100"

@@ -17,7 +17,7 @@ const Home = () => {
             <Link
               to="/create"
               className={
-                'flex justify-center rounded-lg bg-[#000] py-3 px-10 text-white font-bold w-[250px] mb-[25px] hover:bg-white hover:text-black hover:border-[3px] hover:border-black'
+                'flex justify-center rounded-2xl bg-[#000] py-3 px-10 text-white font-bold mb-[25px] hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0'
               }
             >
               Create new content

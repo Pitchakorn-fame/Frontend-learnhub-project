@@ -36,7 +36,7 @@ const Login = () => {
             <input
               id="username"
               type="text"
-              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1 pl-3"
               onChange={(e) => setUsernameInput(e.target.value)}
               required
             />
@@ -47,20 +47,20 @@ const Login = () => {
             <input
               id="password"
               type="password"
-              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1 pl-3"
               onChange={(e) => setPasswordInput(e.target.value)}
               required
             />
           </div>
 
           <div className="flex place-content-around">
-            <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black">
+            <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0">
               LOGIN
             </button>
 
             <Link
               to="/register"
-              className="rounded-lg bg-[#000] py-3 px-8 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black"
+              className="rounded-lg bg-[#000] py-3 px-8 text-white hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0"
             >
               REGISTER
             </Link>

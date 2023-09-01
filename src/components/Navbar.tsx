@@ -27,24 +27,24 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={logout}
-            className="flex items-center rounded-2xl bg-[#000000] py-2 px-5 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black"
+            className="flex items-center text-white rounded-2xl bg-[#000000] py-2 px-4 hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0"
           >
             Logout
           </Link>
         </div>
       ) : (
-        <div className="flex gap-5 font-medium text-white">
+        <div className="flex gap-5 font-medium text-white h-[40px]">
           <Link
             to="/login"
-            className="rounded-2xl bg-[#000000] py-2 px-7 hover:bg-white hover:text-black hover:border-[3px] hover:border-black"
+            className="flex items-center rounded-2xl bg-[#000000] py-2 px-4 hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0"
           >
-            Login
+            <p className="w-full">Login</p>
           </Link>
           <Link
             to="/register"
-            className="rounded-2xl bg-[#000000] py-2 px-5 hover:bg-white hover:text-black hover:border-[3px] hover:border-black"
+            className="flex items-center rounded-2xl bg-[#000000] py-2 px-4 hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0"
           >
-            Register
+            <p className="w-full">Register</p>
           </Link>
         </div>
       )}

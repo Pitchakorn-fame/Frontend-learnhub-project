@@ -56,7 +56,7 @@ const Create = () => {
             type="text"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+            className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1 pl-3"
             required
           />
 
@@ -66,12 +66,12 @@ const Create = () => {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             required
-            className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+            className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1 pl-3"
           />
           <div className="flex justify-center">
             <ReactStars count={5} onChange={(rating) => setRating(rating)} size={24} color2={'#ffd700'} half={false} />
           </div>
-          <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black">
+          <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0">
             Submit
           </button>
         </form>

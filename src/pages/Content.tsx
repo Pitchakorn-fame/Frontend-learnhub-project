@@ -51,16 +51,18 @@ const Content = () => {
       </div>
 
       <div className="flex justify-center bg-[#000] h-screen">
-        <div className="flex justify-between border-2 border-solid rounded-2xl w-[1100px] h-max font-bold p-9 mt-14">
-          <div className="flex flex-col items-center justify-center gap-7">
-            <ReactPlayer url={content?.videoUrl} />
-            <p className="text-white">{content.creatorName}</p>
+        <div className="flex justify-between w-[1200px] h-max font-bold p-9 mt-14">
+          <div className="flex flex-col items-center justify-center w-max gap-7">
+            <div className="w-auto h-auto">
+              <ReactPlayer url={content?.videoUrl} />
+            </div>
+            <p className="text-white text-center text-[25px]">{content.creatorName}</p>
           </div>
 
-          <div className="flex flex-col justify-between rounded-2xl border-2 border-solid border-[#dcdcdc] px-6 pb-8 bg-[#EAEAEA]">
+          <div className="flex flex-col justify-between rounded-2xl border-2 border-solid border-[#dcdcdc] px-6 pb-8 bg-[#EAEAEA] w-[350px]">
             <div className="flex gap-3 pt-[35px]">
               <img src={logoComment} alt="comment logo" className="w-8 h-8" />
-              <p className="text-[20px]">{content.comment}</p>
+              <p className="text-[20px] break-words">{content.comment}</p>
             </div>
 
             <div className="flex flex-col items-end gap-5">

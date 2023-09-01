@@ -50,7 +50,7 @@ const Register = () => {
               id="yourName"
               type="text"
               onChange={(e) => setNameInput(e.target.value)}
-              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1 pl-3"
               required
             />
           </div>
@@ -61,12 +61,12 @@ const Register = () => {
               id="password"
               type="password"
               onChange={(e) => setPasswordInput(e.target.value)}
-              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1"
+              className="rounded-lg border-2 border-solid  w-11/12 border-[#dcdcdc] p-1 pl-3"
               required
             />
           </div>
 
-          <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black hover:border-[3px] hover:border-black">
+          <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0">
             REGISTER
           </button>
         </form>

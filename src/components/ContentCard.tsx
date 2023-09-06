@@ -20,16 +20,17 @@ const ContentCard = ({ content }: ContentCardProps) => {
   return (
     <Link
       to={`/content/${content.id}`}
-      className="flex flex-col justify-between w-[400px] h-auto rounded-lg overflow-hidden bg-[#FFF]"
+      className="flex flex-col justify-between w-auto h-auto rounded-lg overflow-hidden bg-[#FFF]"
     >
-      <img src={content.thumbnailUrl} alt="video thumbnail" className="object-cover w-full aspect-video" />
-
-      <div className="flex flex-col justify-between">
+      <div>
+        <img src={content.thumbnailUrl} alt="video thumbnail" className="object-cover w-full aspect-video" />
         <div className="m-2">
           <p className="break-words font-bold">{content.videoTitle}</p>
           <p>{content.creatorName}</p>
         </div>
+      </div>
 
+      <div className="flex flex-col justify-between">
         <div className="flex items-center gap-2 m-2">
           <img src={logoComment} alt="comment logo" className="w-5 h-5" />
           <p>{content.comment}</p>

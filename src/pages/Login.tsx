@@ -53,14 +53,14 @@ const Login = () => {
             />
           </div>
 
-          <div className="flex place-content-around">
-            <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0">
+          <div className="flex gap-2 place-content-around">
+            <button className="rounded-lg bg-[#000] text-white hover:bg-white hover:text-black h-full w-1/2 py-2 hover:border-black outline hover:outline-offset-0">
               LOGIN
             </button>
 
             <Link
               to="/register"
-              className="rounded-lg bg-[#000] py-3 px-8 text-white hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0"
+              className="rounded-lg bg-[#000] text-white text-center hover:bg-white hover:text-black h-full w-1/2 py-2 hover:border-black outline hover:outline-offset-0"
             >
               REGISTER
             </Link>

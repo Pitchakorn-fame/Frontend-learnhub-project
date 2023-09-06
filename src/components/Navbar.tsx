@@ -1,16 +1,9 @@
 import logo from '../assets/atom.png'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../providers/AuthProvider'
-import useContentList from '../hooks/useContentList'
-import Loading from './Loading'
 
 const Navbar = () => {
   const { isLoggedIn, logout, username } = useAuth()
-  console.log(username)
-  const { contentList, isLoading, error } = useContentList()
-
-  if (isLoading || !contentList) return <Loading />
-  if (error) return <p>{error}</p>
   return (
     <div className="flex justify-between px-10 h-16 items-center">
       <Link to={'/'} className="flex items-center">

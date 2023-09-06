@@ -1,4 +1,4 @@
-import React, { ReactNode, createContext, useContext, useState } from 'react'
+import { ReactNode, createContext, useContext, useState } from 'react'
 import { host } from '../constant'
 
 interface IAuthContext {
@@ -33,7 +33,7 @@ const AuthProvider = ({ children }: IAuthProviderProps) => {
   const login = async (username: string, password: string) => {
     const loginInfo = { username, password }
     try {
-      const res = await fetch(`${host}/auth/login`, {
+      const res = await fetch(`${host}/user/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(loginInfo),

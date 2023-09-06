@@ -65,10 +65,11 @@ const Register = () => {
               required
             />
           </div>
-
-          <button className="rounded-lg bg-[#000] py-3 px-10 text-white hover:bg-white hover:text-black h-full w-auto hover:border-black outline hover:outline-offset-0">
-            REGISTER
-          </button>
+          <div className="flex justify-center">
+            <button className="rounded-lg bg-[#000] text-white text-center hover:bg-white hover:text-black h-full w-1/2 py-2 hover:border-black outline hover:outline-offset-0">
+              REGISTER
+            </button>
+          </div>
         </form>
       </div>
     </>

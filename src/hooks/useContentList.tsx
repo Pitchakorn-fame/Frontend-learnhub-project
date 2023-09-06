@@ -13,7 +13,8 @@ const useContentList = () => {
       try {
         const res = await fetch(`${host}/content`)
         const rawData = await res.json()
-        console.log(rawData)
+        console.log('rawData', rawData)
+
         setContentList(rawData.data)
       } catch (err: any) {
         setError(err.message)

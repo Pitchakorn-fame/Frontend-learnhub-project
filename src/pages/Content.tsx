@@ -28,16 +28,14 @@ const Content = () => {
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
       })
 
-      const data = await res.json()
-
-      if (data.statusCode >= 400) {
-        throw new Error(data.message)
+      if (!res.ok) {
+        throw new Error('Cannot Delete!')
       }
 
       toast.success('Sucessfully deleted')
       navigate(`/`)
     } catch (err: any) {
-      console.log(err.message)
+      toast.error(err.message)
     }
   }
 
@@ -54,7 +52,7 @@ const Content = () => {
         <div className="flex justify-between w-[1200px] h-max font-bold p-9 mt-14">
           <div className="flex flex-col items-center justify-center w-max gap-7">
             <div className="w-auto h-auto">
-              <ReactPlayer url={content?.videoUrl} />
+              <ReactPlayer url={content.videoUrl} />
             </div>
             <p className="text-white text-center text-[25px]">{content.creatorName}</p>
           </div>

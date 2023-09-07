@@ -1,3 +1,10 @@
+The Learnhub website project is a platform where users can post, comment, rate, and delete learning videos. I created this website to practice my skills. This website uses Vite, TypeScript, and Tailwind
+
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
